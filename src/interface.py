@@ -46,7 +46,7 @@ class Interface:
         if update.message.from_user.id not in self.users:
             raise DispatcherHandlerStop
         os.system('squeue -u u0052 > workspace/queue.txt')
-        with open('queue.txt', mode='r') as f:
+        with open('workspace/queue.txt', mode='r') as f:
             text = f.readlines()
         bot.send_message(chat_id=update.message.chat_id, text='\n'.join(text))
 
@@ -56,6 +56,6 @@ class Interface:
         if update.message.from_user.id not in self.users:
             raise DispatcherHandlerStop
         os.system('squeue > workspace/queue_all.txt')
-        with open('queue.txt', mode='r') as f:
+        with open('workspace/queue_all.txt', mode='r') as f:
             text = f.readlines()
         bot.send_message(chat_id=update.message.chat_id, text='\n'.join(text))
