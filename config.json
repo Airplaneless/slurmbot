@@ -1,0 +1,5 @@
+{
+  "token": "Your token",
+  "allowed_users": ["list of IDs of allowed telegram users"],
+  "output_dir": "path to directory with progress files"
+}
